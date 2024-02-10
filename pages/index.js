@@ -12,7 +12,7 @@ export default function About() {
 
       <div className="flex justify-center items-center h-[desired-height]">
   <p className="text-orange-500 text-xl font-extrabold  decoration-2 underline-offset-2 text-center pb-5">
-    <strong>We are redefining shopping through accessible image interfaces.</strong>
+    <strong>Redefine the design process.</strong>
   </p>
 </div>
 
@@ -27,10 +27,10 @@ export default function About() {
 
       <ol className="list-decimal pl-5">
         <li className="mb-2">
-          Select a mode to develop an image. Enter a text prompt, and sketch an outline of your desired image to begin.
+          Select which mode to use for developing an image. You may generate an image from an existing image, or via a sketch outline of your desired object. Enter a text prompt, and then hit Generate!
         </li>
         <li className="mb-2">
-          Make thematic changes or generative edits through natural language and inpainting.  
+          Continue to make generative edits through natural language requests.  
         </li>
 
       </ol>

@@ -168,20 +168,6 @@ export default function Home() {
         });
     };
 
-    const giveTips = () => {
-        var msg = "";
-        if (tipMsg){
-          setTipMsg(null)
-        }
-        else {
-          if (selected == 0) msg = 'Type a command corresponding to a thematic change, such as "make the texture softer"';
-          else if (selected == 1) msg = "Type the visual description of the scene you want, masking elements you wish to edit";
-          else msg = "Draw an outline and type a visual description of the scene you want";
-          setTipMsg(msg);
-        }
-
-    };
-
     const processError = (err) => {
       if (err == "The specified version does not exist (or perhaps you don't have permission to use it?)")
         return "Ensure you entered all parameters. You cannot make edits without previously generating or uploading an image.";
@@ -256,13 +242,6 @@ export default function Home() {
                                 Start over
                             </button>
                         )}
-
-                        {
-                            <button className="lil-button" onClick={giveTips}>
-                                <Lightbulb className="icon" />
-                                Tips
-                            </button>
-                        }
 
                         <Download predictions={predictions} />
                     </div>

@@ -9,3 +9,8 @@ This is the **Next-Generation** of shopping, helping you buy exactly what you ne
 1. Enter a text prompt to generate an image, upload your own starting image, or sketch an outline to start.
 2. Make thematic changes or generative edits through natural language and inpainting.
 3. Download images to make final touches in an editor of your choice.
+
+### How to Run the App Locally
+1. Sign up for an account at (Replicate)[replicate.com], and retrieve your API token.
+2. Set the REPLICATE_API_TOKEN as an environment variable via `export REPLICATE_API_TOKEN=r8_Ptm**********************************`
+2. Run `npm install` then `npm run dev`. Open your localhost.

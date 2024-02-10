@@ -1,0 +1,15 @@
+.iframeContainer {
+  width: 100%;
+  height: 100vh; /* Adjust the height as needed */
+  overflow: hidden;
+  position: relative;
+}
+
+.iframeStyle {
+  position: absolute;
+  top: -57px; /* Hide the top 100px */
+  left: 0;
+  width: 100%;
+  height: 1080px; /* Original height of the iframe */
+  border: none; /* Remove border */
+}

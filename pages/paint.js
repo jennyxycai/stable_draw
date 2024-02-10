@@ -24,7 +24,6 @@ export default function Home() {
     const [maskImage, setMaskImage] = useState(null);
     const [userUploadedImage, setUserUploadedImage] = useState(null);
     const [selected, setSelected] = useState(1);
-    const [finalURL, setFinalUrl] = useState(null);
     const [tipMsg, setTipMsg] = useState(null);
 
     console.log(predictions, error, maskImage == null, userUploadedImage == null, selected);
@@ -96,7 +95,6 @@ export default function Home() {
                 var blob = await imageUrlToBlob(prediction.output[prediction.output.length - 1]);
                 console.log(blob);
                 setUserUploadedImage(blob);
-                setFinalUrl(prediction.output[prediction.output.length - 1]);
                 setTipMsg(null);
             }
         }
@@ -139,7 +137,6 @@ export default function Home() {
         setError(null);
         setMaskImage(null);
         setUserUploadedImage(null);
-        setFinalUrl(null);
         setTipMsg(null);
     };
 
@@ -155,17 +152,7 @@ export default function Home() {
         setMaskImage(null);
         setUserUploadedImage(null);
         setSelected(0);
-        setFinalUrl(null);
         setTipMsg(null);
-    };
-
-    const router = useRouter();
-
-    const handleButtonClick = () => {
-        router.push({
-            pathname: "/shop", // The path to the new page
-            query: { finalURL }, // Passing the finalUrl as a query parameter
-        });
     };
 
     const processError = (err) => {
@@ -178,7 +165,6 @@ export default function Home() {
     return (
         <div>
             <Head>
-                <title>ShopVisual</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             </Head>
             <div style={{ marginTop: "30px" }}></div>
@@ -215,20 +201,6 @@ export default function Home() {
                 <div className="max-w-[512px] mx-auto">
                     <PromptForm onSubmit={handleSubmit} />
 
-                    {finalURL && (
-                        <div className = "mb-3" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                            <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                                <Button
-                                    variant="contained"
-                                    style={{ backgroundColor: "green", color: "white", textTransform: "none", boxShadow: "none" }} // Add textTransform style here
-                                    endIcon={<ShoppingCartIcon />}
-                                    onClick={handleButtonClick}
-                                >
-                                    Search
-                                </Button>
-                            </div>
-                        </div>
-                    )}
                     {tipMsg && (
                         <div className="max-w-[512px] mx-auto">
                             <Alert severity="info">{tipMsg}</Alert>

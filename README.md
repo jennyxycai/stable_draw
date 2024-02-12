@@ -1,6 +1,8 @@
 # Design Your World
 
-Web app link: https://stable-draw-items.vercel.app
+Web app: https://stable-draw-items.vercel.app
+
+https://github.com/jennyxycai/stable_draw/assets/69180033/db8dedd1-4db4-4246-b542-91c9337223c9
 
 Natural language queries are simply not enough to narrow the choices down. In the spirit of an image is worth 1000 words, we use images to draw what is difficult to describe in words. Design items in your environment from scratch. 
 
@@ -16,3 +18,7 @@ This is the **Next-Generation** of shopping, helping you buy exactly what you ne
 1. Sign up for an account at (Replicate)[replicate.com], and retrieve your API token.
 2. Set the REPLICATE_API_TOKEN as an environment variable via `export REPLICATE_API_TOKEN=r8_Ptm**********************************`
 2. Run `npm install` then `npm run dev`. Open your localhost.
+
+
+
+
